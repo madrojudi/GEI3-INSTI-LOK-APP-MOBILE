@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Application de INSET</string>
+    <string name="entrer_un_nom">Entrer un nom</string>
+    <string name="sortie">Sortie :</string>
+</resources>

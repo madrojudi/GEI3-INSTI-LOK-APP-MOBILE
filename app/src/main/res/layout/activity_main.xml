@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/image_good"
+        android:adjustViewBounds="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <EditText
+        android:id="@+id/champ_saisi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/entrer_un_nom"
+        android:textSize="@dimen/textLargePro"
+        android:inputType="phone"
+        android:layout_marginLeft="@dimen/margin_text"
+        android:layout_marginTop="@dimen/margin_text"
+        android:layout_marginBottom="@dimen/margin_text"
+        android:layout_marginRight="@dimen/margin_text"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image"/>
+    <Button
+        android:id="@+id/boutton"
+        android:onClick="jeClick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimary"
+        android:padding="@dimen/padding_text"
+        android:text="Hello World!"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="@dimen/margin_text"
+        app:layout_constraintTop_toBottomOf="@+id/champ_saisi"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sortie"
+            android:padding="@dimen/margin_text"/>
+        <TextView
+            android:id="@+id/affichage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/entrer_un_nom"
+            android:layout_marginBottom="@dimen/margin_text"
+            android:layout_marginLeft="@dimen/margin_text"
+            android:layout_marginRight="@dimen/margin_text"
+            android:textSize="@dimen/textLargePro"
+            android:textAlignment="center"
+            />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
