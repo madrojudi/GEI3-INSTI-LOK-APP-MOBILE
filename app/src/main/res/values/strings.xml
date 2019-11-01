@@ -2,4 +2,5 @@
     <string name="app_name">Application de INSET</string>
     <string name="entrer_un_nom">Entrer un nom</string>
     <string name="sortie">Sortie :</string>
+    <string name="mon_header">Mon Header</string>
 </resources>

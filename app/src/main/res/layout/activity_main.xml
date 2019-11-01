@@ -1,76 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    >
 
-    <ImageView
-        android:id="@+id/image"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/image_good"
-        android:adjustViewBounds="true"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="?attr/actionBarSize"
+        tools:targetApi="lollipop"
+        android:background="@color/colorPrimary"
+        app:titleTextColor="@android:color/white"
+        app:navigationIcon="@drawable/ic_keyboard_left"
         />
 
-    <EditText
-        android:id="@+id/champ_saisi"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/entrer_un_nom"
-        android:textSize="@dimen/textLargePro"
-        android:inputType="phone"
-        android:layout_marginLeft="@dimen/margin_text"
-        android:layout_marginTop="@dimen/margin_text"
-        android:layout_marginBottom="@dimen/margin_text"
-        android:layout_marginRight="@dimen/margin_text"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image"/>
-    <Button
-        android:id="@+id/boutton"
-        android:onClick="jeClick"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/colorPrimary"
-        android:padding="@dimen/padding_text"
-        android:text="Hello World!"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="@android:color/white"
-        android:layout_marginTop="@dimen/margin_text"
-        app:layout_constraintTop_toBottomOf="@+id/champ_saisi"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:orientation="horizontal"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        tools:context=".MainActivity"
         >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/sortie"
-            android:padding="@dimen/margin_text"/>
-        <TextView
-            android:id="@+id/affichage"
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/entrer_un_nom"
-            android:layout_marginBottom="@dimen/margin_text"
-            android:layout_marginLeft="@dimen/margin_text"
-            android:layout_marginRight="@dimen/margin_text"
-            android:textSize="@dimen/textLargePro"
-            android:textAlignment="center"
-            />
-    </LinearLayout>
+            android:layout_height="wrap_content">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/image_good"
+                    android:adjustViewBounds="true"
+                    />
+
+                <EditText
+                    android:id="@+id/champ_saisi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/entrer_un_nom"
+                    android:textSize="@dimen/textLargePro"
+                    android:inputType="textMultiLine"
+                    android:maxLines="4"
+                    android:scrollHorizontally="false"
+                    android:singleLine="false"
+                    android:layout_marginLeft="@dimen/margin_text"
+                    android:layout_marginTop="@dimen/margin_text"
+                    android:layout_marginBottom="@dimen/margin_text"
+                    android:layout_marginRight="@dimen/margin_text"/>
+                <Button
+                    android:id="@+id/boutton"
+                    android:onClick="jeClick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/padding_text"
+                    android:text="Hello World!"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="@android:color/white"
+                    android:layout_marginTop="@dimen/margin_text" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sortie"
+                        android:padding="@dimen/margin_text"/>
+                    <TextView
+                        android:id="@+id/affichage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/entrer_un_nom"
+                        android:layout_marginBottom="@dimen/margin_text"
+                        android:layout_marginLeft="@dimen/margin_text"
+                        android:layout_marginRight="@dimen/margin_text"
+                        android:textSize="@dimen/textLargePro"
+                        android:textAlignment="center"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_launcher"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_margin="@dimen/margin_text"/>
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>

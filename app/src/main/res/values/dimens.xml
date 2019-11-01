@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="padding_text">16dp</dimen>
+    <dimen name="padding_text_2">8dp</dimen>
     <dimen name="margin_text">16dp</dimen>
     <dimen name="margin_mini_text">8dp</dimen>
     <dimen name="textLargePro">26sp</dimen>

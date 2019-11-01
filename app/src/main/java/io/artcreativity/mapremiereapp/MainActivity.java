@@ -1,9 +1,13 @@
 package io.artcreativity.mapremiereapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText clavier;
     private Button boutton;
     private TextView affichage;
+    private ItemDeMaListe title;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +27,14 @@ public class MainActivity extends AppCompatActivity {
         boutton = findViewById(R.id.boutton);
         affichage = findViewById(R.id.affichage);
         Log.d(MyTAG, affichage.getText().toString());
+        title = (ItemDeMaListe) getIntent().getSerializableExtra("ma_item");
+        clavier.setText(title.title);
+        affichage.setText(title.subTitle);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
     }
 
     public void jeClick(View view) {
@@ -29,4 +42,21 @@ public class MainActivity extends AppCompatActivity {
         String saisi = clavier.getText().toString();
         affichage.setText(saisi);
     }
+
+    @Override
+    public boolean onMenuOpened(int featureId, Menu menu) {
+        Log.d(MyTAG, "onMenuOpened: ");
+        return super.onMenuOpened(featureId, menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        Log.e(MyTAG, "onOptionsItemSelected: ");
+        if(item.getItemId()==android.R.id.home){
+            super.onBackPressed();
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+
 }
