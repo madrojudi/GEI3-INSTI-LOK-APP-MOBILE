@@ -25,4 +25,5 @@
     <string name="supprimer">Supprimer</string>
     <string name="refresh">Refresh</string>
     <string name="aller_au_debut">Aller au debut</string>
+    <string name="compteur">Compteur</string>
 </resources>

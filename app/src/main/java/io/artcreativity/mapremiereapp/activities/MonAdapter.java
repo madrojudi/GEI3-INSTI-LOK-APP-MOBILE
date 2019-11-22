@@ -1,4 +1,4 @@
-package io.artcreativity.mapremiereapp;
+package io.artcreativity.mapremiereapp.activities;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,6 +8,9 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import java.util.List;
+
+import io.artcreativity.mapremiereapp.entities.ItemDeMaListe;
+import io.artcreativity.mapremiereapp.R;
 
 public class MonAdapter extends BaseAdapter {
     private final List<ItemDeMaListe> items;

@@ -1,4 +1,4 @@
-package io.artcreativity.mapremiereapp;
+package io.artcreativity.mapremiereapp.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,6 +12,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import io.artcreativity.mapremiereapp.entities.ItemDeMaListe;
+import io.artcreativity.mapremiereapp.R;
 
 public class MainActivity extends AppCompatActivity {
     public static final String MyTAG = "INSTI";

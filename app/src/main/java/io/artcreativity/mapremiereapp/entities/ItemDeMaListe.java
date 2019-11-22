@@ -1,10 +1,10 @@
-package io.artcreativity.mapremiereapp;
+package io.artcreativity.mapremiereapp.entities;
 
 import java.io.Serializable;
 
 public class ItemDeMaListe implements Serializable {
-    String title;
-    String subTitle;
+    public String title;
+    public String subTitle;
 
     public ItemDeMaListe() {
     }

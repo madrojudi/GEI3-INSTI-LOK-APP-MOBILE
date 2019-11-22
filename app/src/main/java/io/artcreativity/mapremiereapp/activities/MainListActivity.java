@@ -1,4 +1,4 @@
-package io.artcreativity.mapremiereapp;
+package io.artcreativity.mapremiereapp.activities;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -7,28 +7,22 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.database.DataSetObserver;
-import android.os.Build;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.GridView;
-import android.widget.ListAdapter;
 import android.widget.ListView;
-import android.widget.SimpleAdapter;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
+
+import io.artcreativity.mapremiereapp.entities.ItemDeMaListe;
+import io.artcreativity.mapremiereapp.R;
 
 public class MainListActivity extends AppCompatActivity {
 
@@ -130,6 +124,10 @@ public class MainListActivity extends AppCompatActivity {
                 break;
             case R.id.setting_item_menu:
                 intent = new Intent(this, SettingsActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.compteur_menu:
+                intent = new Intent(this, AsyncTackActivity.class);
                 startActivity(intent);
                 break;
         }

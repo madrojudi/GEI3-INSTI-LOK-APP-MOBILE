@@ -1,8 +1,10 @@
-package io.artcreativity.mapremiereapp;
+package io.artcreativity.mapremiereapp.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import io.artcreativity.mapremiereapp.R;
 
 public class MainRecyclerActivity extends AppCompatActivity {
 

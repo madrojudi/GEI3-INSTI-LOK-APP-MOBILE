@@ -1,9 +1,11 @@
-package io.artcreativity.mapremiereapp;
+package io.artcreativity.mapremiereapp.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
+
+import io.artcreativity.mapremiereapp.R;
 
 public class SettingActivity extends PreferenceActivity {
 

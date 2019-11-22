@@ -1,4 +1,4 @@
-package io.artcreativity.mapremiereapp;
+package io.artcreativity.mapremiereapp.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,7 +9,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import io.artcreativity.mapremiereapp.entities.ItemDeMaListe;
+import io.artcreativity.mapremiereapp.R;
 
 public class CreateItemActivity extends AppCompatActivity {
 

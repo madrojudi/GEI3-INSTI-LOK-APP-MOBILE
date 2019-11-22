@@ -9,13 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <service
+            android:name=".services.MonPremierService"
+            android:enabled="true"
+            android:exported="true"></service>
+
+        <activity android:name=".activities.AsyncTackActivity" />
         <activity
-            android:name=".SettingsActivity"
-            android:label="@string/title_activity_settings"></activity>
-        <activity android:name=".SettingActivity" />
-        <activity android:name=".CreateItemActivity" />
-        <activity android:name=".MainRecyclerActivity" />
-        <activity android:name=".MainListActivity">
+            android:name=".activities.SettingsActivity"
+            android:label="@string/title_activity_settings" />
+        <activity android:name=".activities.SettingActivity" />
+        <activity android:name=".activities.CreateItemActivity" />
+        <activity android:name=".activities.MainRecyclerActivity" />
+        <activity android:name=".activities.MainListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,7 +29,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.MainActivity"
             android:theme="@style/AppThemeNoBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
